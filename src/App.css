@@ -1,32 +1,87 @@
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal {
+  position: fixed;
+  z-index: 1040;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: auto;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.dialog {
+  /* position: absolute; */
+  z-index: 1040;
+  width: 300px;
+  height: 240px;
+  /* transform: `translate(-${top}%, -${left}%)`, */
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  text-align: center;
+  padding: 20px 5px 60px 5px;
+
+}
+
+.dialog h4:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 30px;
+  background: gray;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.RequestInviteForm {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.RequestInviteForm input {
+  margin: 10px 0;  
+}
+
+.RequestInviteForm button {
+  margin: 20px 0;  
+}
+
+.confirm {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
 }
